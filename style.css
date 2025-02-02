@@ -1283,9 +1283,11 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
       background-size:cover;
       width: 100%;
       margin-right: -100%;
-      float: right;
       min-height: 475px;
       padding: 150px 0; 
+      background-position: center;
+      background-repeat: no-repeat;
+
 }
 
 .second-slide{
@@ -1568,25 +1570,30 @@ Sections style for bigger screens
     margin-right: 1%;
     font-size: 16px;
     margin-top: 2%;
+    padding: 8px;
   }
   
-  .container-title{
+  .main-container .container-title{
     font-size: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana;  
   }
+
+  .main-container .container-content{
+    padding: 10px;
+  }
+
   .home-main{
     display: inline-block;
   }
 
-
   .about-us-home{
-    font-weight: bolder;
     background-image: url("images/building.jpg");
     background-size: cover;
   }
   .about-us-home .button{
-    background-color: white;
+    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white);
     color:black;
+    font-weight: 100;
   }
 
 
@@ -1597,23 +1604,22 @@ Sections style for bigger screens
   .about-us-home .container-content{
     color:white;
     background-color: #929292a6;
-    padding: 6px;
     margin-top:-5%
   }
   /**Founders Conatiner*/
   .founders{
     position: relative;
-    margin-top: -24%;
+    margin-top: -20%;
     z-index: 1000;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
     align-self: center;
     height: 500px;
     background-image: url("images/pastors-BW-1.jpg");
     color: white;
     background-size: cover;
-    width: auto;
-    font-weight: bolder;
+    background-position: center;
+    background-repeat: no-repeat;
 
   }
   .founders .container-title{
@@ -1626,22 +1632,20 @@ Sections style for bigger screens
     position: relative;
     top: 35%;
     background-color:#929292a6;
-    padding: 6px;
     border-radius: 5px;
   }
 
   .founders .button{
     position: relative;
     top:35%;
-    background-color: #ffffffff;
+    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white) ;
     color:black;
   }
 
   /**Purpose containers*/
   .purpose-container{
     margin-top: -23%;
-    background-image:linear-gradient(rgb(126, 87, 236),rgb(8, 8, 70));
-    border-radius: 15px;
+    background-image:linear-gradient(white,rgb(126, 87, 236),rgb(8, 8, 70));
     height: auto;
 
   }
@@ -1651,8 +1655,6 @@ Sections style for bigger screens
   }
   .purpose-container .container-content{
     color: gold;
-    font-weight: bolder;
-    padding:5px;
   }
   .purpose-container .button{
    display: none;
@@ -1661,23 +1663,19 @@ Sections style for bigger screens
   /*Value Containers**/
 
   .values-container{
-    height: 180px;
+    height: auto;
     align-items: right;
     border-radius: 10px;
     background-size: cover;
     margin-top: 2%;
     box-shadow: inset;
-    background-image:repeating-radial-gradient(white,rgb(29, 26, 26));
+    background-image:repeating-radial-gradient(white,rgb(231, 223, 223),white,rgb(231, 223, 223),white,rgb(231, 223, 223),blue);
     color:black;
 
   }
   
   .values-container .container-content{
-
-    font-weight: bolder;
     background-color: transparent;
-    padding: 5px;
-
   }
   .values-container .button{
     display: none;
@@ -1687,31 +1685,27 @@ Sections style for bigger screens
   .prayer-container{
     border: 1px;
     margin-top: 2%; 
-    background-image:linear-gradient(rgb(126, 87, 236),rgb(8, 8, 70));
-    padding: 8px;
+    background-image:linear-gradient(rgb(8,8,70),rgb(126, 87, 236),white);
     height: auto;
     border-radius: 8%;
-    font-weight: bolder;
-
   }
-  .prayer-container .container-content{
+  .prayer-container .container-content,.prayer-container .container-title{
     color:gold;
-    padding: 5px;
-
   }
+
+
   .prayer-container .buttons{
     gap: 15px;
-    background-color: rgb(37,37,37);
+    background-color:transparent;
     display: flex;
     justify-content: space-around;
     margin-left: 10%;
     margin-right: 10%;
   }
   .prayer-container .buttons .button{
-    background-color: white;
-    color:black;
-    border-radius: 10px;
-    font-weight: 900;
+    background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+    color:gold;
+    border-radius: 15px;
   }
 
   /**Sermon Conatiners*/
@@ -1743,7 +1737,6 @@ Sections style for bigger screens
   }
 
   .sermon-cover .container-content{
-    font-size:20px;
     color:red;
   }
 
@@ -1753,6 +1746,9 @@ Sections style for bigger screens
     margin-left: 0%;
     padding: 10px;
     border-radius: 15px;
+    background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+    color:gold;
+
   }
 
   .sermon-cover, .founders{
@@ -1789,16 +1785,21 @@ Sections style for bigger screens
     margin-top: -11%;
     background-image: linear-gradient(white,transparent,rgb(162, 162, 253));
     padding: 8px;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 15px;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
+    font-weight: bolders;
   }
   .community-button{
     height: auto;
     background-color: transparent;
     margin-top: 0;
-    
+  }
+
+  .community-button .button{
+    background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+    color:gold;
   }
 
   /*Events Styles*/
@@ -1848,13 +1849,13 @@ Sections style for bigger screens
   }
 
   .content .button{
-    background-color: rgb(119, 119, 119);
-    color:wheat;
+    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white);
+    color:black;
   }
 
   .events-button{
     margin-top: 5%;
-    background-color: #e4e4e4;
+    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white);
     color:black;
   }
   
@@ -1870,15 +1871,22 @@ Sections style for bigger screens
 
   .donations{
     background-color: rgb(202, 202, 202);
+    height: auto;
   }
 
   .donations .button{
-    margin-top: 10%;
+    margin-top: 5%;
+    background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+    color:gold;
   }
 
   .second-slide{
     background-image: url('images/church_logo.png');
     background-size: cover;
+  }
+
+  .site-footer{
+    font-size: 16px;
   }
 
 }
