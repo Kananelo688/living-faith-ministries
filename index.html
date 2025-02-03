@@ -133,61 +133,62 @@
 					<div class ="button" role="button" id="prayer-request-button">
 						Request Our Services
 					</div>
-					<!--Counselling Session Booking-->
-					<div class="service-request-form hidden-form">
-						<h4>Book a couselling session or send a prayer request with one of our Pastors</h4>
-						<form>
-							<div class="form-entry">
-								<label for="name ">Your Name:   </label>
-								<input type="text" name="name" id="name" required placeholder="Enter your name">
-							</div>
-	
-							<div class = "form-entry">
-								<label for="phonenumbers">Your Phone:  </label>
-								<input type="tel" id="phonenumbers" name="phonenumbers" required placeholder="Enter your name">
-							</div>
-	
-							<div class = "form-entry">
-								<label for="email">Your Email:   </label>
-								<input type="email" id="email" name="email" placeholder="Enter your email address">
-							</div>
-	
-							<div class = "form-entry">
-								<label for="service">Select a service:   </label>
-								<select id="service" name="service" required>
-									<option value="">-- Choose a service --</option>
-									<option value="couselling">Counselling session</option>
-									<option value="prayer-request">Prayer request</option>
-								</select>
-							</div>
-	
-							<div class = "form-entry">
-								<label for="date">Choose a Date: </label>
-								<input type="date" id="date" name="date" required>
-							</div>
-	
-							<div class = "form-entry">
-								<label for="time">Choose a Time: </label>
-								<input type="time" id="time" name="time" required>
-							</div>
-	
-							<div class = "form-entry">
-								<label for="notes">
-									Additional notes: 
-								</label>
-								<textarea id="notes" name="notes" rows="5"></textarea>
-							</div>
-							<input type = "submit" id="service-request-submit-button">
-						</form>
-						
-						<div class="faq">
-							<h5> Requently Asked Questions:</h5>
-							<p><strong>Can I reschedule?</strong> Yes,up to 24 hours before the session</p>
-							<p><strong>Is payment Required?</strong> No, there is no payment required for our sessions</p>
-						</div>
-					 </div>
-					
 				</div>
+
+				<!--Counselling Session Booking-->
+				<div class="service-request-form hidden-form animate__animated" id="service-request-form">
+					<h4>Book a couselling session or send a prayer request with one of our Pastors</h4>
+					<form>
+						<div class="form-entry">
+							<label for="name ">Your Name:   </label>
+							<input type="text" name="name" id="name" required placeholder="Enter your name">
+						</div>
+
+						<div class = "form-entry">
+							<label for="phonenumbers">Your Phone:  </label>
+							<input type="tel" id="phonenumbers" name="phonenumbers" required placeholder="Enter your name">
+						</div>
+
+						<div class = "form-entry">
+							<label for="email">Your Email:   </label>
+							<input type="email" id="email" name="email" placeholder="Enter your email address">
+						</div>
+
+						<div class = "form-entry">
+							<label for="service">Select a service:   </label>
+							<select id="service" name="service" required>
+								<option value="">-- Choose a service --</option>
+								<option value="couselling">Counselling session</option>
+								<option value="prayer-request">Prayer request</option>
+							</select>
+						</div>
+
+						<div class = "form-entry">
+							<label for="date">Choose a Date: </label>
+							<input type="date" id="date" name="date" required>
+						</div>
+
+						<div class = "form-entry">
+							<label for="time">Choose a Time: </label>
+							<input type="time" id="time" name="time" required>
+						</div>
+
+						<div class = "form-entry">
+							<label for="notes">
+								Additional notes: 
+							</label>
+							<textarea id="notes" name="notes" rows="5"></textarea>
+						</div>
+						<input type = "submit" id="service-request-submit-button">
+						<button type="reset" id="service-request-cancel-button">Cancel</button>
+					</form>
+					
+					<div class="faq">
+						<h5> Requently Asked Questions:</h5>
+						<p><strong>Can I reschedule?</strong> Yes,up to 24 hours before the session</p>
+						<p><strong>Is payment Required?</strong> No, there is no payment required for our sessions</p>
+					</div>
+				 </div>
 
 				<div class="main-container sermon-cover">
 					<h2 class="container-title">Latest Sermon</h2>
@@ -225,45 +226,49 @@
 				</p>
 
 				<div class="main-container community-button">
-					<div class="button" id="join-community-button" role="button">Join Our Communities</div>
-					<div class="community-request-form hidden-form">
-						<h4 class="form-heading">Provide your details belown to join our communities</h4>
-						<form>
-							<div class = "form-entry">
-								<p>Full Names: </p>
-								<input name="user-name" placeholder="Enter your full names" required>
+					<div class="button animate__animated" id="join-community-button" role="button">Join Our Communities</div>
+					
+				</div>
+
+				<div class="community-request-form hidden-form animate__animated" id="community-form">
+					<h4 class="form-heading">Provide your details belown to join our communities</h4>
+					<form>
+						<div class = "form-entry">
+							<p>Full Names: </p>
+							<input name="user-name" placeholder="Enter your full names" required>
+						</div>
+						<div class = "form-entry">
+							<p>Your Age:</p>
+							<input type="number" name="age" placeholder="Enter your age" maxlength="2" minlength="1" required> 
+						</div>
+					
+						<div class = "form-entry">
+							<p>Phone Numbers: </p>
+							<input type="number" name="phone-numbers" placeholder="Enter your number" minlength="8" maxlength="10">
+						</div>
+						<div class = "form-entry ">
+							<p>Email: </p>
+							<input type="email" name="user-email" placeholder="Enter your email">
+						</div>
+						<div class = "request form-entry">
+							<p>Provide your residential address:</p>
+							<textarea name="address" placeholder="Enter your Address"></textarea>
+						</div>
+						<div class = "form-entry community-name">
+							<p>Select your community of interest:<br></p>
+							<div class = "community-buttons">
+								<input type="radio" name="community" value="women"> Church Women
+								<input type="radio" name="community" value="youth" checked> Youth
+								<input type="radio" name="community" value="protocol"> Protocol Team
+								<input type = "radio" name="community" value = "sunday-school"> Sunday School
+								<input type="radio" name="community" value="ushers"> Church ushers
+								<input type="radio" name="community" value="worship"> Worship Team
 							</div>
-							<div class = "form-entry">
-								<p>Your Age:</p>
-								<input type="number" name="age" placeholder="Enter your age" maxlength="2" minlength="1" required> 
-							</div>
-						
-							<div class = "form-entry">
-								<p>Phone Numbers: </p>
-								<input type="number" name="phone-numbers" placeholder="Enter your number" minlength="8" maxlength="10">
-							</div>
-							<div class = "form-entry">
-								<p>Email: </p>
-								<input type="email" name="user-email" placeholder="Enter your email">
-							</div>
-							<div class = "request form-entry">
-								<p>Provide your residential address:</p>
-								<textarea name="address" placeholder="Enter your Address"></textarea>
-							</div>
-							<div class = "form-entry community-name">
-								<p>Select your community of interest:<br></p>
-								<div class = "community-buttons">
-									<input type="radio" name="community" value="women"> Church Women
-									<input type="radio" name="community" value="youth" checked> Youth
-									<input type="radio" name="community" value="protocol"> Protocol Team
-									<input type = "radio" name="community" value = "sunday-school"> Sunday School
-									<input type="radio" name="community" value="ushers"> Church ushers
-									<input type="radio" name="community" value="worship"> Worship Team
-								</div>
-							</div>
-							<input type = "submit" id="community-request-submit-button">
-						</form>
-					</div>
+						</div>
+						<input type = "submit" id="community-request-submit-button">
+						<button type="button" id="community-cancel-button" role="button">Cancel</button>
+					</form>
+					
 				</div>
 
 				<div class="recent-events main-container">
@@ -296,10 +301,10 @@
 						<div class="content">
 							<div class="date"><i class="fa fa-calendar"></i> Date TBC</div>
 							<div class="event-title">2025 Women's Conference</div>
-							<div class = "button"  id="join-event-button"><a href=" ">Join Event</a></div>
+							<div class = "button join-event-button"  id="join-event-button">Join Event</div>
 						</div>
 
-						<div class = "event-details hidden-form">
+						<div class = "event-details hidden-form animate__animated">
 							<div class="event-details-section event-info">
 								<h4>Event Information</h4>
 								<p><strong>Event Title:</strong>  2025 Women's Conference</p>
@@ -339,8 +344,8 @@
 										<textarea rows="5" id="requirement" placeholder="start typing..."></textarea>
 									</div>
 
-									<button type="submit" id="event-registration-submit-button">Register Now</button>
-									<button type="cancel" id="event-registration-cancel-button">Cancel</button>
+									<button type="submit" class="event-registration-submit-buttons">Register Now</button>
+									<button type="cancel" class="event-registration-cancel-buttons">Cancel</button>
 								</form>
 							</div>
 						</div>

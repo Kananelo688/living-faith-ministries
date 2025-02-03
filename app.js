@@ -37,11 +37,21 @@ function sectionBarHandler(){
 function joinCommunityEventHandler(){
 
 	/**Display the content of the registration form */
-	if (this.nextElementSibling.style.display == "none"){
-		window.alert("Ok");
-	}
-	// this.nextElementSibling.style.display == "block";
-	// this.style.display = "none";
+	if(this.id == "join-community-button"){
+		document.getElementById("community-form").classList.add("animate__fadeIn","show");
+	}else if(this.id == "prayer-request-button")
+		document.getElementById("service-request-form").classList.add("animate__fadeIn","show")
+
+}
+
+function joinChurchEvent(){
+	this.parentNode.nextElementSibling.classList.add("animated__fadeIn","show");
+}
+
+function eventCancelHandler(){
+	this.parentNode.parentNode.parentNode.classList.remove("show");
+	this.parentNode.parentNode.parentNode.classList.replace("animate__fadeIn","animate__fadeOut");
+
 }
 
 function main(){
@@ -52,9 +62,38 @@ function main(){
 	});
 
 	/**Add Action Listener for the "JOIN OUR COMMUNITIES BUTTON" */
-	document.getElementById("join-community-button").addEventListener('click',()=>{
-		this.nextElementSibling.style.display = "block";
+	document.getElementById("join-community-button").addEventListener('click',joinCommunityEventHandler);
+
+	/**Add Action Listener for the REQUEST PRAYER BUTTON */
+	document.getElementById("prayer-request-button").addEventListener('click',joinCommunityEventHandler);
+
+	/**Event Handler for Community Cancel Button*/
+	document.getElementById("community-cancel-button").addEventListener('click',()=>{
+		/**Remove the show class from this element's classList */
+		//document.getElementById("community-form").classList.remove("show");
+		/**Replace fadeIn with fadeOut on button click*/
+		document.getElementById("community-form").classList.replace("animate__fadeIn","animate__fadeOut");
+
+		document.getElementById("community-form").classList.remove("show");
 	});
+
+
+	/**Action Listener for Service request cancel button */
+	document.getElementById("service-request-cancel-button").addEventListener('click',()=>{
+		document.getElementById("service-request-form").classList.replace("animate__fadeIn","animate__fadeOut");
+		document.getElementById("service-request-form").classList.remove("show");
+	});
+
+	/**Action Lister to Join Event Buttons */
+	document.querySelectorAll(".join-event-button").forEach(button=>{
+		button.addEventListener('click',joinChurchEvent);
+	});
+
+	/**Action Listener for Event Cancel Buttons */
+	document.querySelectorAll(".event-registration-cancel-buttons").forEach(button=>{
+		button.addEventListener('click',eventCancelHandler);
+	});
+	
 }
 
 main();
