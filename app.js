@@ -34,11 +34,26 @@ function sectionBarHandler(){
 	}
 }
 
+function joinCommunityEventHandler(){
+
+	/**Display the content of the registration form */
+	if (this.nextElementSibling.style.display == "none"){
+		window.alert("Ok");
+	}
+	// this.nextElementSibling.style.display == "block";
+	// this.style.display = "none";
+}
+
 function main(){
 	
 	sectionBars =document.querySelectorAll('.section-bar').forEach(button=>{
 		button.nextElementSibling.style.display = "none"; //ensure it is None by default
 		button.addEventListener('click',sectionBarHandler);
+	});
+
+	/**Add Action Listener for the "JOIN OUR COMMUNITIES BUTTON" */
+	document.getElementById("join-community-button").addEventListener('click',()=>{
+		this.nextElementSibling.style.display = "block";
 	});
 }
 

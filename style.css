@@ -156,7 +156,7 @@ button,
 select {
   text-transform: none; }
 
-button,
+button,.button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -1166,6 +1166,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     margin-top: 0;
     width: 100px;
     height: 100px;
+    border-radius: 15px;
   }
   .branding .site-title {
     color:inherit;
@@ -1206,7 +1207,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
         font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
         font-weight: bolder;
         font-size: 15px;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 2px solid white;
         -webkit-transition: .5s ease;
         transition: .5s ease; 
         color: inherit;
@@ -1214,7 +1215,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 
 .main-navigation .menu .menu-item.current-menu-item a, .main-navigation .menu .menu-item:hover a {
     border-bottom-color: gold;
-    border-width: 2px; 
+    border-width: 3px; 
   }
 
 .mobile-navigation {
@@ -1226,10 +1227,11 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     list-style: none; 
 }
 .mobile-navigation .menu .menu-item {
-      border-bottom: 1px solid rgb(8,8,70);
+      border-bottom: 1px solid gold;
+
 }
 .mobile-navigation .menu .menu-item:first-child {
-        border-top: 1px solid rgb(8,8,70);
+        border-top: 1px solid gold;
 }
 .mobile-navigation .menu a {
       font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
@@ -1265,8 +1267,8 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   position: relative;
   background-color: transparent;
   border-radius: 5px;
-  margin-left:1%;
-  margin-right: 1%; 
+  /* margin-left:1%;
+  margin-right: 1%;  */
 }
 .hero .slides {
     list-style: none;
@@ -1456,6 +1458,11 @@ Sections style for bigger screens
   transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
   color: rgba(255, 255, 255, 0.959);
 }
+
+.hidden-form{
+  display: none;
+}
+
 .about-footer-section{
   display: flex;
   justify-content: space-around;
@@ -1537,7 +1544,56 @@ Sections style for bigger screens
   color:gold;
 }
 
+/**Prayer Request Form Styles*/
+.service-request-form{
+  margin-top: 5%;
+  background-image:linear-gradient(rgb(8, 8, 70),rgb(126, 87, 236),rgb(13, 39, 122),rgb(126, 87, 236),rgb(8, 8, 70));
+  color:gold;
+  padding: 15px;
+  border-radius: inherit;
+}
+#service-request-submit-button,
+#community-request-submit-button,
+#prayer-request-button,
+#event-registration-cancel-button,
+#event-registration-submit-button{
+  background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+  color:gold;
+  margin-top: 3%;
+}
+
+#event-registration-cancel-button,
+#event-registration-submit-button{
+  margin-top: 3%;
+}
+
+.form-entry{
+  margin-top: 3%;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-display{
+  display: block;
+}
+.event-details{
+  margin-top: 5%;
+  color:#000;
+}
+.form-entry textarea{
+  width: 100%;
+}
+
+.faq{
+  margin-top: 10%;
+}
 @media(max-width:480px){
+
+  .hidden-form{
+    font-size: 16px;
+  }
 
   /**About-Page Styles for phones*/
   .section{
@@ -1547,6 +1603,7 @@ Sections style for bigger screens
   }
 
   /**Hero(Slides) Styles for phones*/
+  
   .hero .slides .slide-subtitle{
     font-size: 24px;
   }
@@ -1568,7 +1625,7 @@ Sections style for bigger screens
     height: 300px;
     margin-left: 1%;
     margin-right: 1%;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 2%;
     padding: 8px;
   }
@@ -1580,6 +1637,7 @@ Sections style for bigger screens
 
   .main-container .container-content{
     padding: 10px;
+    border-radius: 10px;
   }
 
   .home-main{
@@ -1591,9 +1649,9 @@ Sections style for bigger screens
     background-size: cover;
   }
   .about-us-home .button{
-    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white);
+    background-image: linear-gradient(rgb(137, 187, 245),rgb(199, 199, 199),white);
     color:black;
-    font-weight: 100;
+    font-weight: bolder;
   }
 
 
@@ -1602,9 +1660,9 @@ Sections style for bigger screens
   }
 
   .about-us-home .container-content{
-    color:white;
-    background-color: #929292a6;
-    margin-top:-5%
+    color:rgb(0, 0, 0);
+    background-color: #b3b1b1a6;
+    margin-top:-5%;
   }
   /**Founders Conatiner*/
   .founders{
@@ -1616,7 +1674,7 @@ Sections style for bigger screens
     align-self: center;
     height: 500px;
     background-image: url("images/pastors-BW-1.jpg");
-    color: white;
+    color: black;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1631,8 +1689,7 @@ Sections style for bigger screens
   .founders .container-content{
     position: relative;
     top: 35%;
-    background-color:#929292a6;
-    border-radius: 5px;
+    background-color:#b3b1b1a6;
   }
 
   .founders .button{
@@ -1783,7 +1840,7 @@ Sections style for bigger screens
     margin-left: 1%;
     margin-right: 1%;
     margin-top: -11%;
-    background-image: linear-gradient(white,transparent,rgb(162, 162, 253));
+    background-image: linear-gradient(rgb(155, 155, 155),transparent,transparent,rgb(86, 86, 124));
     padding: 8px;
     font-size: 16px;
     border-radius: 15px;
@@ -1793,11 +1850,12 @@ Sections style for bigger screens
   }
   .community-button{
     height: auto;
-    background-color: transparent;
+    background-color:transparent; /*linear-gradient(rgb(8,8,70),rgb(126, 87, 236),rgb(0, 71, 163),rgb(126,87,236),rgb(8,8,70));*/
+    color:gold;
     margin-top: 0;
   }
 
-  .community-button .button{
+  .community-button .button,#community-request-submit-button{
     background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
     color:gold;
   }

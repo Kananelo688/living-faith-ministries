@@ -14,6 +14,9 @@
 
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="style.css">
+
+		<!--Load the animation classes-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 		
 		<!--[if lt IE 9]>
 		<script src="js/ie-support/html5.js"></script>
@@ -50,7 +53,7 @@
 
 
 			<!--CHURCH MOTTO-->
-			<div class="hero">
+			<div class="hero animate__animated animate__bounce">
 				<div class="slides">
 				
 					<li data-bg-image="images/pastors-BW-2.jpg">
@@ -68,23 +71,20 @@
 							</div>
 						</div>
 					</li>
-
-					
-
 				</div>
 			</div>
 
 			<!--Main Content-->
 			<main class="home-main">
 			
-				<div class="main-container about-us-home">
+				<div class="main-container animate__animated animate__fadeIn about-us-home">
 					<h2 class = "container-title about-us-home-title">Welcome!</h2>
 					<p class="container-content">
-						Welcome to Living Faith International Ministries, a place of transformation, hope, and unwaeving faith.
+						Welcome to Living Faith International Ministries, a place of transformation, hope, and unweaving faith.
 						At our core, we are committed to touching lives, building forgiving hearts, and preparing souls for a greater purpose
 						in God's Kingdom.
 					</p>
-					<div class="button" role="button">Learn More</div>
+					<div class="button" role="button"><a href= " ">Learn More</a></div>
 				</div>
 			
 				<div class="main-container founders">
@@ -95,7 +95,7 @@
 						With hearts full of love and compasion, they have dedicated thier
 						lives to building a ministry that reflects the power of forgiveness, love, faith and healing.
 					</p>
-					<div class="button" role="button">Read More</div>
+					<div class="button" role="button"><a href= " ">Read More</a></div>
 					
 				</div>
 
@@ -130,15 +130,63 @@
 						No matter the situation, remember that you are not alone. Reach out to us today, and let's
 						believe together for God's breakthrough in your.
 					</p>
-					<div class="buttons">
-						<div class="button">
-							<a href="#">Request Prayer</a>
-						</div>
-
-						<div class ="button">
-							<a href="#">Request Counselling</a>
-						</div>
+					<div class ="button" role="button" id="prayer-request-button">
+						Request Our Services
 					</div>
+					<!--Counselling Session Booking-->
+					<div class="service-request-form hidden-form">
+						<h4>Book a couselling session or send a prayer request with one of our Pastors</h4>
+						<form>
+							<div class="form-entry">
+								<label for="name ">Your Name:   </label>
+								<input type="text" name="name" id="name" required placeholder="Enter your name">
+							</div>
+	
+							<div class = "form-entry">
+								<label for="phonenumbers">Your Phone:  </label>
+								<input type="tel" id="phonenumbers" name="phonenumbers" required placeholder="Enter your name">
+							</div>
+	
+							<div class = "form-entry">
+								<label for="email">Your Email:   </label>
+								<input type="email" id="email" name="email" placeholder="Enter your email address">
+							</div>
+	
+							<div class = "form-entry">
+								<label for="service">Select a service:   </label>
+								<select id="service" name="service" required>
+									<option value="">-- Choose a service --</option>
+									<option value="couselling">Counselling session</option>
+									<option value="prayer-request">Prayer request</option>
+								</select>
+							</div>
+	
+							<div class = "form-entry">
+								<label for="date">Choose a Date: </label>
+								<input type="date" id="date" name="date" required>
+							</div>
+	
+							<div class = "form-entry">
+								<label for="time">Choose a Time: </label>
+								<input type="time" id="time" name="time" required>
+							</div>
+	
+							<div class = "form-entry">
+								<label for="notes">
+									Additional notes: 
+								</label>
+								<textarea id="notes" name="notes" rows="5"></textarea>
+							</div>
+							<input type = "submit" id="service-request-submit-button">
+						</form>
+						
+						<div class="faq">
+							<h5> Requently Asked Questions:</h5>
+							<p><strong>Can I reschedule?</strong> Yes,up to 24 hours before the session</p>
+							<p><strong>Is payment Required?</strong> No, there is no payment required for our sessions</p>
+						</div>
+					 </div>
+					
 				</div>
 
 				<div class="main-container sermon-cover">
@@ -148,7 +196,7 @@
 						<b>The Power of Faith and Fasting</b>
 					</div>
 				</div>
-				
+
 				<div class="main-container sermon-container">
 					<div class="button"><a href="#">Watch Sermon</a></div>
 					<div class="button"><a href="seremons.html">See All Sermons</a></div>
@@ -169,15 +217,53 @@
 
 				<p class="community-content">
 					At Living Faith International Ministries, we are more than just a cogregation - we are a family united
-					 in faith, love and purpose. Our Church community is made up of people from all the walks in life,
-					 including vibrant youth, nurturing women, strong men of faith, and joyful children growing in God's word.
-					 Each group plays a vital role in building a Christ-centered environment where everyone valued, supported and empowered.
-					 Through fellowship, worship and service, we grow together, strengthen our faith and impacting lives.
-					 No matter your age or background, there is a place for you in our family.
+					in faith, love and purpose. Our Church community is made up of people from all the walks in life,
+					including vibrant youth, nurturing women, strong men of faith, and joyful children growing in God's word.
+					Each group plays a vital role in building a Christ-centered environment where everyone is valued, supported and empowered.
+					Through fellowship, worship and service, we grow together, strengthen our faith and impacting lives.
+					No matter your age or background, there is a place for you in our family.
 				</p>
 
 				<div class="main-container community-button">
-					<div class="button"><a href="">Join Our Community</a></div>
+					<div class="button" id="join-community-button" role="button">Join Our Communities</div>
+					<div class="community-request-form hidden-form">
+						<h4 class="form-heading">Provide your details belown to join our communities</h4>
+						<form>
+							<div class = "form-entry">
+								<p>Full Names: </p>
+								<input name="user-name" placeholder="Enter your full names" required>
+							</div>
+							<div class = "form-entry">
+								<p>Your Age:</p>
+								<input type="number" name="age" placeholder="Enter your age" maxlength="2" minlength="1" required> 
+							</div>
+						
+							<div class = "form-entry">
+								<p>Phone Numbers: </p>
+								<input type="number" name="phone-numbers" placeholder="Enter your number" minlength="8" maxlength="10">
+							</div>
+							<div class = "form-entry">
+								<p>Email: </p>
+								<input type="email" name="user-email" placeholder="Enter your email">
+							</div>
+							<div class = "request form-entry">
+								<p>Provide your residential address:</p>
+								<textarea name="address" placeholder="Enter your Address"></textarea>
+							</div>
+							<div class = "form-entry community-name">
+								<p>Select your community of interest:<br></p>
+								<div class = "community-buttons">
+									<input type="radio" name="community" value="women"> Church Women
+									<input type="radio" name="community" value="youth" checked> Youth
+									<input type="radio" name="community" value="protocol"> Protocol Team
+									<input type = "radio" name="community" value = "sunday-school"> Sunday School
+									<input type="radio" name="community" value="ushers"> Church ushers
+									<input type="radio" name="community" value="worship"> Worship Team
+								</div>
+							</div>
+							<input type = "submit" id="community-request-submit-button">
+						</form>
+					</div>
 				</div>
 
 				<div class="recent-events main-container">
@@ -210,9 +296,56 @@
 						<div class="content">
 							<div class="date"><i class="fa fa-calendar"></i> Date TBC</div>
 							<div class="event-title">2025 Women's Conference</div>
-							<div class = "button"><a href=" ">Join Event</a></div>
+							<div class = "button"  id="join-event-button"><a href=" ">Join Event</a></div>
+						</div>
+
+						<div class = "event-details hidden-form">
+							<div class="event-details-section event-info">
+								<h4>Event Information</h4>
+								<p><strong>Event Title:</strong>  2025 Women's Conference</p>
+								<p><strong>Date & Time:</strong>  14 Nov 2025, 17:00 till Late</p>
+								<p><strong>Location: </strong> Lithabaneng, Ha Mots'oeneng</p>
+								<p><strong>Description:</strong>Brief description of what the event is all about
+								</p>
+							</div>
+
+							<div class = "event-details-section event-registration-form">
+								<h4>Provide your details below to join this event:</h4>
+								<form>
+									<div class = "form-entry">
+										<label for="name">Your Name(s): </label>
+										<input type="text" id="name" name="name" required placeholder="Enter your name">
+									</div>
+
+									<div class = "form-entry">
+										<label for="email">Your Email: </label>
+										<input type="email" id="email" name="email" placeholder="Enter your email">
+									</div>
+
+									<div class = "form-entry">
+										<label for = "phonenumbers">Your Phone:</label>
+										<input type="tel" id="phonenumbers"name="phonenumbers" placeholder="Enter your phone">
+									</div>
+
+									<div class = "form-entry block-display">
+										<label for="age">Select Your Age Group:<br></label>
+										<input type="radio" checked name="age-group" value="youth"> Youth
+										<input type="radio" name="age-group" value="adult"> Adult
+										<input type="radio" name="age-group" value="Senior"> Senior
+									</div>
+
+									<div class = "form-entry block-display">
+										<label for="requirement">State any special requirements,if any:</label>
+										<textarea rows="5" id="requirement" placeholder="start typing..."></textarea>
+									</div>
+
+									<button type="submit" id="event-registration-submit-button">Register Now</button>
+									<button type="cancel" id="event-registration-cancel-button">Cancel</button>
+								</form>
+							</div>
 						</div>
 					</div>
+
 				</div>
 
 				<div class = "main-container donations">
