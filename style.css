@@ -1411,6 +1411,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 /**About Page Styles*/
 
 @media(max-width:480px){
+
   .about-main .section{
     margin-top: 2%;
     margin-left: 1%;
@@ -1468,7 +1469,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   margin-top: 5%;
 }
 
-.hidden {
+.hidden,.hidden-form {
   opacity: 0;
   visibility: hidden;
   transition: opacity 2s ease-in-out, visibility 0s linear 2s;
@@ -1644,8 +1645,17 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   }
 
   /**About-Page Styles for phones*/
+  #service-request-form{
+    margin-top: -7%;
+  }
 
+  #community-form{
+    margin-top: -6%;
+  }
 
+  .event-details{
+    margin-top: -5%;
+  }
   /**Hero(Slides) Styles for phones*/
   
   .hero .slides .slide-subtitle{
