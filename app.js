@@ -23,29 +23,27 @@
 })(jQuery, document, window);
 
 
-function sectionBarHandler(){
-	//check to seeif the button is pressed
-	if(this.nextElementSibling.style.display == "none"){
-		this.lastElementChild.src="images/drop_up.webp";
-		this.nextElementSibling.style.display= "block";
-	}else{
-		this.lastElementChild.src="images/dropdown.png";
-		this.nextElementSibling.style.display= "none";
-	}
-}
 
 function joinCommunityEventHandler(){
 
 	/**Display the content of the registration form */
 	if(this.id == "join-community-button"){
 		document.getElementById("community-form").classList.add("animate__fadeIn","show");
-	}else if(this.id == "prayer-request-button")
-		document.getElementById("service-request-form").classList.add("animate__fadeIn","show")
+	}else if(this.id == "prayer-request-button"){
+		document.getElementById("service-request-form").classList.add("animate__fadeIn","show");
+	}else if(this.id == "nnena-see-more"){
+		
+	}else if(this.id == "mampho-see-more"){
+		document.getElementById("mampho-more").classList.add("show","animate__fadeIn");
+		this.style.display = "none";
+	}
+	
+
 
 }
 
 function joinChurchEvent(){
-	this.parentNode.nextElementSibling.classList.add("animated__fadeIn","show");
+	this.parentNode.nextElementSibling.classList.add("animate__fadeIn","show");
 }
 
 function eventCancelHandler(){
@@ -53,19 +51,48 @@ function eventCancelHandler(){
 	this.parentNode.parentNode.parentNode.classList.replace("animate__fadeIn","animate__fadeOut");
 
 }
+/**
+ * Handles click events fired by the buttons in the About PAGE of the website
+ */
+function sectionButtonEventHandler() {
+	
+    var content = document.getElementById(this.id.split('-')[0] + '-content');
+
+    if (this.id.endsWith('-open-button')) {
+        content.classList.add("show", "animate__fadeIn");
+        content.classList.remove("animate__fadeOut");
+        this.lastElementChild.src = "images/drop_up.webp";
+        this.id = this.id.replace('-open-button', '-close-button');
+    } else {
+        content.classList.remove("show", "animate__fadeIn");
+        content.classList.add("animate__fadeOut");
+        this.lastElementChild.src = "images/dropdown.png";
+        this.id = this.id.replace('-close-button', '-open-button');
+    }
+}
 
 function main(){
 	
-	sectionBars =document.querySelectorAll('.section-bar').forEach(button=>{
-		button.nextElementSibling.style.display = "none"; //ensure it is None by default
-		button.addEventListener('click',sectionBarHandler);
-	});
+	/**Add Event Handlers for the about page section-bar buttons */
+
+	document.querySelectorAll(".section-bar").forEach(button=>{
+		button.addEventListener('click',sectionButtonEventHandler);
+	})
+
+	// document.getElementById("about-open-button").addEventListener('click',()=>{
+	// 	document.getElementById("about-content").classList.add("show","animate__fadeIn");
+	// });
 
 	/**Add Action Listener for the "JOIN OUR COMMUNITIES BUTTON" */
 	document.getElementById("join-community-button").addEventListener('click',joinCommunityEventHandler);
 
 	/**Add Action Listener for the REQUEST PRAYER BUTTON */
 	document.getElementById("prayer-request-button").addEventListener('click',joinCommunityEventHandler);
+
+	/**add event handlerto pastors' 'read-more' buttons */
+	document.getElementById('nnena-see-more').addEventListener('click',joinCommunityEventHandler);
+	document.getElementById('mampho-see-more').addEventListener('click',joinCommunityEventHandler);
+
 
 	/**Event Handler for Community Cancel Button*/
 	document.getElementById("community-cancel-button").addEventListener('click',()=>{
@@ -76,6 +103,22 @@ function main(){
 
 		document.getElementById("community-form").classList.remove("show");
 	});
+
+	document.getElementById("nnena-see-less").addEventListener('click',()=>{
+		document.getElementById('nnena-more').classList.remove('show');
+		document.getElementById('nnena-see-more').style.display= "block";
+	});
+
+	document.getElementById("mampho-see-less").addEventListener('click',()=>{
+		document.getElementById('mampho-more').classList.remove('show');
+		document.getElementById('mampho-see-more').style.display= "block";
+	});
+
+	document.getElementById("nnena-see-more").addEventListener('click',()=>{	
+		document.getElementById("nnena-more").classList.add("show","animate__fadeIn");
+		this.style.display = "none";
+		alert("hee!");
+	})
 
 
 	/**Action Listener for Service request cancel button */

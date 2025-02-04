@@ -1183,12 +1183,14 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 .main-navigation .menu-toggle{
     border: none;
     background: none;
-    padding: 20px;
+    padding: 10px;
     display: none;
     font-family: "Novecento Sans", "Raleway", "Noto Sans" "Open Sans", sans-serif;
     text-transform: uppercase;
     outline: none;
     box-shadow: 0 6px 0 0 gold;
+    border: 0.5px solid gold;
+    margin-top: 3%;
   }
 
 
@@ -1228,7 +1230,9 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     list-style: none; 
 }
 .mobile-navigation .menu .menu-item {
-      border-bottom: 1px solid gold;
+      /* border-bottom: 1px solid gold; */
+      box-shadow: 0 3px 0  gold;
+      border-radius: 15px;
 
 }
 .mobile-navigation .menu .menu-item:first-child {
@@ -1239,10 +1243,12 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
       text-transform: uppercase;
       font-weight: 400;
       display: block;
-      padding: 10px 20px; }
+      padding: 10px 20px; 
+}
 .mobile-navigation .menu a small {
         display: block;
-        color:rgb(8,8,70); }
+        color:rgb(8,8,70); 
+  }
 
 
 @media screen and (max-width: 990px) {
@@ -1370,34 +1376,62 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   padding: 50px;
   text-align: center; 
   width: auto;
-  min-width: 200px;
+  background-image: url("images/building.jpg");
+  box-shadow: 0 3px 0 1px rebeccapurple;
+  height: 220px;
 }
 
 .page-head .page-title {
-    font-weight: 100;
+    font-weight: bolder;
     font-size: 30px;
     margin-bottom: 0;
-    color: gold;
-    word-break: break-word; 
+    color: black;
+    width: 100%;
 }
 .page-head-others{
   background-color: rgb(8,8,70);
 }
+@media(max-width:480px){
+  .page-head{
+    padding: 0px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius:15px ;
+  }
+  .page-head .page-title{
+    font-size: 20px;
+    width: 100%;
 
+  }
+
+  .mampho{
+    color:black;
+  }
+}
 
 /**About Page Styles*/
 
-.outter-container{
-  background-color: transparent;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 18px;
-  border-bottom: none;
-  display: block;
-  width: 100%;
-  margin-left: 4%;
-  margin-right: 4%;
-}
+@media(max-width:480px){
+  .about-main .section{
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    box-shadow: 0 3px 0 0px rgb(255, 0, 0);
+    padding: 10px;
+  }
 
+  .about-main .section .section-bar .drop-down{
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-main .section .section-bar .section-bar-title{
+    font-size: 14px;
+  }
+
+  .about-main .section .hidden{
+    margin-top: 2%;
+  }
+}
 
 .drop-down{
   width:30px;
@@ -1409,9 +1443,13 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 
 .section{
   display: block;
-  background-image:linear-gradient(rgb(8,8,70),rgb(30, 8, 70),rgb(65, 8, 70));
+  background-image:linear-gradient(rgb(0, 4, 255),rgb(36, 1, 100),rgb(152, 223, 223));
   color:gold;
   border-radius: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: fit-content;
+  border: 0.5px solid black;
 }
 
 .section-bar{
@@ -1423,58 +1461,35 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   color: inherit;
 }
 
-
-.section-bar:hover{
-  background-color: rgb(22, 22, 128);
-}
-
 .section-bar-title{
   font-size: 22px;
-  margin-left: 5%;
+  margin-left: 3%;
   text-transform: uppercase;
   margin-top: 5%;
 }
 
-/**
-Sections style for bigger screens
-*/
-.section{
-  width: 33%;
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 2s ease-in-out, visibility 0s linear 2s;
+  max-height: 0;
+  overflow: hidden;
 }
 
-.mission, .purpose{
-  margin-left: 33.33333%;
-  margin-top: -6%;
-}
-.vision,.our-services{
-  margin-left: 66.6666666%;
-  margin-top: -6%;
+.show {
+ opacity: 1;
+ visibility: visible;
+ transition: opacity 2s ease-in-out;
+ max-height: fit-content;
 }
 
-.hidden{
-  display: none;
-  transform: 0.3s ease;
-  margin-left: 2%;
-  margin-right: 2%;
-  transition: cubic-bezier(0.6, 0.04, 0.98, 0.335);
-  color: rgba(255, 255, 255, 0.959);
+.animate__fadeOut {
+   animation: fadeOut 2s;
 }
 
-.hidden-form{
-   opacity: 0;
-   visibility: hidden;
-   transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
-   height: auto;
-   max-height: 0;
-   overflow: hidden;
-   /* display: none; */
-}
-
-.show{
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 1.5s ease-in-out;
-  max-height: fit-content;
+@keyframes fadeOut {
+   from { opacity: 1; }
+   to { opacity: 0; }
 }
 
 .about-footer-section{
@@ -1514,20 +1529,28 @@ Sections style for bigger screens
 }
 
 .hidden .pastors-container{
-  display: flex;
-  justify-content: space-between;
+  display: block;
   align-items: center;
-  padding: auto;
+  padding: 10px;
+  text-align: center;
 }
 
 .hidden .pastors-container .pastor-profile{
   text-align: center;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 14px;
+  margin-top: 4%;
+}
+
+.hidden .pastors-container .pastor-profile h5 span{
+  font-size: 10px;
+  color:red;
+  text-transform: none;
+  font-weight: 100;
 }
 
 .hidden .pastors-container .pastor-profile img{
-  width: 98%;
+  width: 100%;
   max-height:800px;
 }
 
@@ -1568,7 +1591,9 @@ Sections style for bigger screens
 #service-request-cancel-button,
 #community-cancel-button,
 .event-registration-submit-buttons,
-.event-registration-cancel-buttons{
+.event-registration-cancel-buttons,
+#mampho-read-more,
+#nnena-read-more{
   background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
   color:gold;
   margin-top: 5%;
@@ -1619,11 +1644,7 @@ Sections style for bigger screens
   }
 
   /**About-Page Styles for phones*/
-  .section{
-    width: 100%;
-    margin-top: auto;
-    margin-left: auto;
-  }
+
 
   /**Hero(Slides) Styles for phones*/
   
