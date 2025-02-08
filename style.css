@@ -1444,7 +1444,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 
 .section{
   display: block;
-  background-image:linear-gradient(rgb(0, 4, 255),rgb(36, 1, 100),rgb(152, 223, 223));
+  background-image:linear-gradient(rgb(0, 4, 255),rgb(36, 1, 100),rgb(24, 148, 68));
   color:gold;
   border-radius: 10px;
   margin-left: 2%;
@@ -1559,10 +1559,10 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 .main-container{
     font-family: inherit;
     background-color:white;
-    margin-right: 2%;
+    margin-right: 3%;
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 0 5px 0 rgb(0, 0, 0);
+    box-shadow: 4px 5px 0 1px rgb(0, 0, 0);
     height: 100%;
     height: 545px;
     display: block;
@@ -1574,7 +1574,6 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   color: white;
   background-size: cover;
   box-sizing: border-box;
-
   border-bottom: 1px solid rebeccapurple;
 }
 
@@ -1598,7 +1597,10 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
   color:gold;
   margin-top: 5%;
+  box-shadow: 0 3px 0 rgb(166, 252, 190);
 }
+
+#prayer-request-button{ box-shadow: 0 3px 0 rgb(166, 252, 190);}
 
 #event-registration-cancel-button,
 #event-registration-submit-button{
@@ -1611,7 +1613,9 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom:1px solid rgb(105, 44, 44);
 }
+
 
 .block-display{
   display: block;
@@ -1622,6 +1626,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 }
 .form-entry textarea{
   width: 100%;
+  border: 1px sold black;
 }
 
 .faq{
@@ -1630,15 +1635,50 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 
 .community-request-form,.service-request-form,.event-details{
   margin-top: 5%;
-  color:gold;
+  color:rgb(0, 0, 0);
   padding: 15px;
   border-radius: 15px;
-  background-image:linear-gradient(rgb(8, 8, 70), rgb(126, 87, 236),rgb(126, 87, 236),rgb(8, 8, 70));
+  background-color:rgb(255, 255, 255);
+  /* , rgb(126, 87, 236),rgb(126, 87, 236),rgb(8, 8, 70)); */
   text-align: center;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
 }
+
+.address, .community-name{
+  display: inline-block;
+}
+
+
+
 @media(max-width:480px){
+
+
+  /*Sermons Page Styles*/
+  .sermon-content{
+    margin-left:2%;
+    margin-right: 2%;
+    background-color: #c0c0c0;
+    box-shadow: 4px 0 4px 0px rgb(88, 85, 85);
+    height: auto;
+    margin-top: 3%;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .sermon-content .sermon-picture{
+    max-height: 250px;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    width: 95%;
+    border-radius: 15px;
+  }
+  .sermon-content .sermon-title{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+  }
 
   .hidden-form{
     font-size: 16px;
@@ -1677,8 +1717,8 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   .main-container{
     border-radius: 20px;
     height: 300px;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
     font-size: 14px;
     margin-top: 2%;
     padding: 8px;
@@ -1702,11 +1742,14 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     background-image: url("images/building.jpg");
     background-size: cover;
   }
-  .about-us-home .button{
-    background-image: linear-gradient(rgb(137, 187, 245),rgb(199, 199, 199),white);
-    color:black;
+  .about-us-home .button,
+  .founders .button{
+    background-image:  linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
+    color:gold;
     font-weight: bolder;
+    box-shadow: 0 3px 0 rgb(166, 252, 190);
   }
+
 
 
   .about-us-home .container-title{
@@ -1749,8 +1792,6 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   .founders .button{
     position: relative;
     top:35%;
-    background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white) ;
-    color:black;
   }
 
   /**Purpose containers*/
@@ -1778,7 +1819,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     align-items: right;
     border-radius: 10px;
     background-size: cover;
-    margin-top: 2%;
+    margin-top: 3%;
     box-shadow: inset;
     background-image:repeating-radial-gradient(white,rgb(231, 223, 223),white,rgb(231, 223, 223),white,rgb(231, 223, 223),blue);
     color:black;

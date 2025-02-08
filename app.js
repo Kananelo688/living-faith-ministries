@@ -97,11 +97,8 @@ function main(){
 			button.parentNode.parentNode.parentNode.classList.remove("show");
 			button.parentNode.parentNode.parentNode.classList.replace("animate__fadeIn","animate__fadeOut");
 			button.parentNode.parentNode.parentNode.previousElementSibling.style.display='flex';
-
-
 		});
-	})
-
+	});
 }
 
 main();
