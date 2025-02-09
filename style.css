@@ -269,7 +269,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   /* background: -webkit-linear-gradient(#e2caae, #c39f70); */
   /* background: linear-gradient(#e2caae, #c39f70); */
   /* border-bottom: 1px solid #a68861; */
-  box-shadow: 0 3px 0 rgb(255, 0, 0);
+  box-shadow: 0 3px 0 rgb(166, 252, 190);
   padding: 5px 8px;
   border-radius: 15px;
   color: gold;
@@ -1377,7 +1377,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   text-align: center; 
   width: auto;
   background-image: url("images/building.jpg");
-  box-shadow: 0 3px 0 1px rebeccapurple;
+  box-shadow: 0 3px 0 1px rgb(122, 0, 75);
   height: 220px;
 }
 
@@ -1591,9 +1591,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 #service-request-cancel-button,
 #community-cancel-button,
 .event-registration-submit-buttons,
-.event-registration-cancel-buttons,
-#mampho-read-more,
-#nnena-read-more{
+.event-registration-cancel-buttons{
   background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
   color:gold;
   margin-top: 5%;
@@ -1614,6 +1612,8 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   justify-content: space-between;
   align-items: center;
   border-bottom:1px solid rgb(105, 44, 44);
+  box-shadow: 2px 0 2px 0 blue;
+  border-radius: 10px;
 }
 
 
@@ -1627,6 +1627,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
 .form-entry textarea{
   width: 100%;
   border: 1px sold black;
+  background-color: rgb(176, 176, 241);
 }
 
 .faq{
@@ -1655,6 +1656,11 @@ video{
   border-radius: 15px;
   height: 400px;
 
+}
+
+.video-close, .video-open{
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 @media(max-width:480px){
 
@@ -1685,7 +1691,7 @@ video{
     font-size: 18px;
     font-weight: 900;
   }
-  .sermon-welocome-message{
+  .sermon-welocome-message,.welcome-to-events{
     background-image:linear-gradient(white,rgb(189, 171, 236),rgb(166, 166, 241));
     color:black;
     box-shadow: 4px 0 4px 0px rgb(88, 85, 85);
@@ -1870,7 +1876,7 @@ video{
     margin-left: 10%;
     margin-right: 10%;
   }
-  .prayer-container .buttons .button{
+  .prayer-container .buttons .button,.video-open,.video-close{
     background-image: linear-gradient(rgb(8,8,70),rgb(196, 122, 245));
     color:gold;
     border-radius: 15px;

@@ -49,15 +49,32 @@ function sectionButtonEventHandler() {
 function main(){
 	
 
+	/**Event Listeners for "see more" buttons */
+
+	document.querySelectorAll(".see-more").forEach(button=>{
+		button.addEventListener('click',()=>{
+			button.nextElementSibling.classList.add("show","animate_fadeIn");
+			button.style.display= "none";
+		});
+	});
+
+	/**Event listeners for "see less" buttons */
+	document.querySelectorAll(".see-less").forEach(button=>{
+		button.addEventListener('click',()=>{
+			button.parentNode.classList.replace("animate__fadeIn","animate_fadeOut");
+			button.parentNode.classList.remove("show");
+			button.parentNode.previousElementSibling.style.display = "inline";
+		});
+	});
+
+
 	document.querySelectorAll(".video-open").forEach(button=>{
 		button.addEventListener('click',()=>{
 			button.parentNode.nextElementSibling.classList.add("show","animate__fadeIn");
 			button.parentNode.style.display = "none";
 			//load the video from start on each 'watch' button press
-			//button.parentNode.nextElementSibling.firstElementChild.load();
-			button.parentNode.nextElementSibling.firstElementChild.requestPictureInPicture();
-
-
+			button.parentNode.nextElementSibling.firstElementChild.load();
+			//button.parentNode.nextElementSibling.firstElementChild.requestPictureInPicture();
 		});
 	});
 
