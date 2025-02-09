@@ -48,6 +48,26 @@ function sectionButtonEventHandler() {
 
 function main(){
 	
+
+	document.querySelectorAll(".video-open").forEach(button=>{
+		button.addEventListener('click',()=>{
+			button.parentNode.nextElementSibling.classList.add("show","animate__fadeIn");
+			button.parentNode.style.display = "none";
+			//load the video from start on each 'watch' button press
+			//button.parentNode.nextElementSibling.firstElementChild.load();
+			button.parentNode.nextElementSibling.firstElementChild.requestPictureInPicture();
+
+
+		});
+	});
+
+	document.querySelectorAll(".video-close").forEach(button=>{
+		button.addEventListener('click',()=>{
+			button.parentNode.previousElementSibling.style.display = 'inline';
+			button.parentNode.classList.remove("show");
+			button.parentNode.firstElementChild.pause();
+		});
+	});
 	/**Add Event Handlers for the about page section-bar buttons */
 
 	document.querySelectorAll(".section-bar").forEach(button=>{
@@ -99,6 +119,10 @@ function main(){
 			button.parentNode.parentNode.parentNode.previousElementSibling.style.display='flex';
 		});
 	});
+
+	/**Add SERMON OPEN VIDEO Button */
+	
+	
 }
 
 main();
