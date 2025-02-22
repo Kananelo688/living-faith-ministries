@@ -266,9 +266,6 @@ form input[type="submit"]{
 button,.button, form input[type="submit"], form button, form input[type="reset"] {
   display: inline-block;
   background: rgb(8,8,70);
-  /* background: -webkit-linear-gradient(#e2caae, #c39f70); */
-  /* background: linear-gradient(#e2caae, #c39f70); */
-  /* border-bottom: 1px solid #a68861; */
   box-shadow: 0 3px 0 rgb(166, 252, 190);
   padding: 5px 8px;
   border-radius: 15px;
@@ -1377,8 +1374,8 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   text-align: center; 
   width: auto;
   background-image: url("images/building.jpg");
-  box-shadow: 0 3px 0 1px rgb(122, 0, 75);
-  height: 220px;
+  box-shadow: 4px 1px 0 1px rgb(27, 21, 25);
+  height: 500px;
 }
 
 .page-head .page-title {
@@ -1416,13 +1413,14 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     margin-top: 2%;
     margin-left: 1%;
     margin-right: 1%;
-    box-shadow: 0 3px 0 0px rgb(255, 0, 0);
+    box-shadow: 0 3px 0 0px rgb(187, 128, 128);
     padding: 10px;
   }
 
+
   .about-main .section .section-bar .drop-down{
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 
   .about-main .section .section-bar .section-bar-title{
@@ -1460,6 +1458,10 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   cursor: pointer;
   border-radius: inherit;
   color: inherit;
+}
+
+.event-gallery-bar{
+  width:100%
 }
 
 .section-bar-title{
@@ -1562,7 +1564,7 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
     margin-right: 3%;
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 4px 5px 0 1px rgb(0, 0, 0);
+    box-shadow: 3px 0px 0 1px rgb(54, 53, 53);
     height: 100%;
     height: 545px;
     display: block;
@@ -1640,10 +1642,13 @@ button,.button, form input[type="submit"], form button, form input[type="reset"]
   padding: 15px;
   border-radius: 15px;
   background-color:rgb(255, 255, 255);
-  /* , rgb(126, 87, 236),rgb(126, 87, 236),rgb(8, 8, 70)); */
   text-align: center;
   margin-left: 2%;
   margin-right: 2%;
+}
+.community-request-form{
+  height: 600px;
+  box-shadow: 3px 1px 0 0px rgb(54, 53, 53);
 }
 
 .address, .community-name{
@@ -1662,7 +1667,87 @@ video{
   margin-top: 2%;
   margin-bottom: 2%;
 }
+
+
+.event-picture-item  img{
+  width: 100%;
+  height: 250px;
+  border-radius: inherit;
+}
+
+.event-container {
+  height: auto;
+  border-radius: 15px;
+  box-shadow:  4px 0 4px 0px rgb(88, 85, 85);
+  background-image:linear-gradient(white,rgb(126, 87, 236),rgb(8, 8, 70));
+  margin-top:2% ;
+  margin-left: 2%;
+  margin-right: 2%;
+  color: gold;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.event-container .no-event{
+  margin-top: 6%;
+  position: relative;
+}
+.event-brief,.event-description{
+  text-align: left;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.gallery{
+  margin-left: 0%;
+  width: 100%;
+}
+.see-more,.see-less{
+  text-align: center;
+}
+
+.event-picture-item{
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
+  gap: 2px;
+  padding: 2px;
+  background-color: inherit;
+  margin-left: -0,5%;
+  margin-top: 2%;
+  /* flex-wrap: wrap; */
+
+}
+
+.description ul li{
+  list-style: none;
+}
+
+.event-buttons{
+  margin-top: 2%;
+}
+.event-heading{
+  margin-top: 3%;
+  text-align: center;
+  border-left: 1px solid blue;
+  border-right: 1px solid blue;
+  margin-left: 2%;
+  margin-right: 2%;
+  box-shadow: 3px 0 4px 0 blue;
+  border-radius: 100%;
+  padding: 10px;
+}
+
 @media(max-width:480px){
+
+  .event-picture img{
+    width:100%;
+    height:99% ;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border: 2px solid #ccc;
+    transition: transform 0.2s;
+  }
+
 
 
   /*Sermons Page Styles*/
@@ -1670,7 +1755,7 @@ video{
     margin-left:2%;
     margin-right: 2%;
     background-image:linear-gradient(white,rgb(189, 171, 236),rgb(166, 166, 241));
-    box-shadow: 4px 0 4px 0px rgb(88, 85, 85);
+    box-shadow: 2px 0 2px 0px rgb(88, 85, 85);
     height: auto;
     margin-top: 3%;
     text-align: center;
@@ -1692,14 +1777,19 @@ video{
     font-weight: 900;
   }
   .sermon-welocome-message,.welcome-to-events{
-    background-image:linear-gradient(white,rgb(189, 171, 236),rgb(166, 166, 241));
-    color:black;
-    box-shadow: 4px 0 4px 0px rgb(88, 85, 85);
+    /* background-image:linear-gradient(white,rgb(189, 171, 236),rgb(166, 166, 241)); */
+    color:white;
+    /* box-shadow: 4px 0 4px 0px rgb(88, 85, 85); */
     border-radius: 15px;
     padding: 10px;
-    margin-top: 3%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-top: -70%;
+    font-weight: 900%;
+  }
+  .no-event{
+    margin-top: 5%;
+  }
+  .page-upcoming-events{
+    margin-top: 10%;
   }
 
   .hidden-form{
@@ -1712,7 +1802,7 @@ video{
   }
 
   #community-form{
-    margin-top: -6%;
+    margin-top: -3%;
   }
 
   .event-details{
@@ -1741,7 +1831,7 @@ video{
     height: 300px;
     margin-left: 2%;
     margin-right: 2%;
-    font-size: 14px;
+    font-size: 16px;
     margin-top: 2%;
     padding: 8px;
   }
@@ -1808,7 +1898,7 @@ video{
   .founders .container-content{
     position: relative;
     top: 35%;
-    background-color:#b3b1b1a6;
+    background-color:#dfdfdfa6;
   }
 
   .founders .button{
@@ -1955,23 +2045,47 @@ video{
     text-align: left;
     box-shadow: 0 0 0 0 rgb(0, 0, 0);
   }
+
+  .community-item{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .community-buttons{
+    display: inline-block;
+    width: 100%;
+  }
+  .community-name{
+    width: 100%;
+  }
   .community-content{
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-top: -11%;
-    background-image: linear-gradient(rgb(155, 155, 155),transparent,transparent,rgb(86, 86, 124));
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: -15%;
+    background-image: linear-gradient(rgb(209, 209, 209),transparent,transparent,rgb(103, 103, 104));
     padding: 8px;
     font-size: 16px;
     border-radius: 15px;
     border-top-left-radius: 0%;
     border-top-right-radius: 0%;
     font-weight: bolders;
+    box-shadow: 3px 1px 0 0px rgb(54, 53, 53);
+  
+  }
+  .community-request-form .form-heading{
+    margin-top: 2%;
+  }
+  .community-request-form form .address{
+    width: 100%;
   }
   .community-button{
     height: auto;
     background-color:transparent; /*linear-gradient(rgb(8,8,70),rgb(126, 87, 236),rgb(0, 71, 163),rgb(126,87,236),rgb(8,8,70));*/
     color:gold;
     margin-top: 0;
+    text-align: center;
   }
 
   .community-button .button,#community-request-submit-button{
@@ -2006,6 +2120,7 @@ video{
     border-bottom-right-radius: 45%;
     text-align: left;
   }
+
   .content{
     padding-top: 5px;
     padding-bottom: 5px;
@@ -2030,10 +2145,11 @@ video{
     color:black;
   }
 
-  .events-button{
+  .events-button,.event-buttons .button{
     margin-top: 5%;
     background-image: linear-gradient(rgb(186, 218, 255),rgb(143, 143, 143),white);
     color:black;
+    box-shadow: 3px 0 4px 1 rgb(53, 24, 66) !important;
   }
   
   .upcoming-events{
@@ -2042,6 +2158,8 @@ video{
     color:gold;
     height: auto;
   }
+
+  
   .upcoming-events .container-title{
     color:darkblue;
   }

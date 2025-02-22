@@ -48,13 +48,14 @@ function sectionButtonEventHandler() {
 
 function main(){
 	
-
+	
 	/**Event Listeners for "see more" buttons */
 
 	document.querySelectorAll(".see-more").forEach(button=>{
 		button.addEventListener('click',()=>{
 			button.nextElementSibling.classList.add("show","animate_fadeIn");
 			button.style.display= "none";
+			// button.parentNode.style.color="black";
 		});
 	});
 
